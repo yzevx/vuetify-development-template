@@ -6,28 +6,25 @@ import { VuetifyPlugin, transformAssetUrls } from 'webpack-plugin-vuetify';
 export default defineConfig({
   source: {
     entry: {
-      index: './src/main.ts',
-    },
+      index: './src/main.ts'
+    }
   },
   html: {
-    template: './index.html',
+    template: './index.html'
   },
   resolve: {
     alias: {
-      '@': './src',
+      '@': './src'
     },
-    extensions: ['.html', '.ts', '.js'],
+    extensions: ['.html', '.ts', '.js']
   },
   server: {
     historyApiFallback: true,
-    port: 80,
+    port: 80
   },
   tools: {
     rspack: {
-      plugins: [
-        new VueLoaderPlugin({ transformAssetUrls }),
-        new VuetifyPlugin(),
-      ],
+      plugins: [new VueLoaderPlugin({ transformAssetUrls }), new VuetifyPlugin()],
       module: {
         rules: [
           {
@@ -35,11 +32,11 @@ export default defineConfig({
             exclude: /index\.html$/,
             loader: 'vue-loader',
             options: {
-              experimentalInlineMatchResource: true,
-            },
-          },
-        ],
-      },
-    },
-  },
+              experimentalInlineMatchResource: true
+            }
+          }
+        ]
+      }
+    }
+  }
 });

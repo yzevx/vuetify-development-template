@@ -1,7 +1,8 @@
 {
   "experimentalTernaries": true,
+  "printWidth": 100,
   "singleQuote": true,
+  "trailingComma": "none",
   "bracketSameLine": true,
-  "vueIndentScriptAndStyle": true,
-  "singleAttributePerLine": true
+  "vueIndentScriptAndStyle": true
 }

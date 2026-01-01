@@ -9,8 +9,8 @@ export default createRouter({
       path: '/',
       component: () => import('@/pages/HelloWorld'),
       meta: {
-        layout: Blank,
-      },
-    },
-  ],
+        layout: Blank
+      }
+    }
+  ]
 });
